@@ -1,0 +1,224 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta charset= "utf-8">
+	<meta name= "autor" content="Ibrahin Mancilla">
+	<meta name= "Descripción" content="Sitio Web Semestral">
+	<meta name= "Keyword" content="HTML, Learn, CSS">
+	<link rel="shortcut icon" type="image/ico" href="favihtml.ico">
+    	<link rel="stylesheet" href="CineMTL.css">
+	<title>HowLearnMTL</title>
+</head>
+
+<body background= https://previews.123rf.com/images/bonumopus/bonumopus1502/bonumopus150200151/36540101-pattern-with-movie-cinema-clapper-seamless-pattern-can-be-used-for-wallpapers-pattern-fills-web.jpg>
+
+    	<header><h1><font Color="#fff18b">🎶📼Modo Cine de HowLearnMTL🎞️📽️</font></h1></header>
+
+    	<nav id="id_1">
+			<ul>
+				<li><a href="HowLearnMTL.html">Inicio</a></li>
+				<li><a href="tml.html">HTML</a>
+					<ul>
+						<li><a href="tml.html#estructura">Estructura básica</a></li>
+						<li><a href="tml.html#etiqueta">Etiquetas comúnes</a></li>
+						<li><a href="tml.html#semantica">Etiquetas semánticas</a></li>
+						<li><a href="tml.html#multimedia">Multimedia</a>
+		
+							<ul>
+								<li><a href="#AudioMTL">Audio</a></li>
+								<li><a href="CineMTL.html">Video</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
+
+				<li><a href="CssMTL.html">CSS</a>
+					<ul>
+						<li><a href="CssMTL.html#estilos">Estilos</a></li>
+						<li><a href="CssMTL.html#prop">Propiedades Comunes</a></li>
+					</ul>
+
+				<li><a href="JavaScript.html">JAVASCRIPT</a>
+					<ul>
+						<li><a href="JavaScript.html#sinvar">Sintaxis y variables</a></li>
+						<li><a href="JavaScript.html#event">Eventos</a></li>
+						<li><a href="JavaScript.html#funcion">Funciones básicas</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+
+	</nav>
+
+	<main>
+
+<Center>
+	<u><h1>Multimedia</h1></u>
+	<h2>Elija un Video</h2>		
+	<br>
+	
+	<select id="selectorVideo">
+        	<option value="Multivideo.mp4">Trailer Marvel Game</option>
+        	<option value="Multivideo2.mp4">Trailer Little Nightmares 3</option>
+        	<option value="Multivideo3.mp4">Trailer Peak</option>
+        	<option value="Multivideo4.mp4">Trailer Last Season MHA</option>
+        	<option value="Multivideo5.mp4">Trailer Squid Game S3</option>
+		<option value="Multivideo6.mp4">Deku vs Dark Might</option>
+		<option value="Multivideo7.mp4">Invincible vs Conquest</option>
+		<option value="Multivideo8.mp4">Saitama vs Garou</option>
+
+
+
+    	</select>
+	<br><br>
+
+	<video id="reproductorVideo" width="1000"></video>
+	<br><br>
+
+	 <h2>Controles</h2>
+	<br>
+
+  	<button onclick="reproducirVideo()">Reproducir video</button>
+  	<button onclick="pausarVideo()">Pausa</button>
+	<button onclick="subirVolumenVideo()">Subir volumen</button>
+    	<button onclick="bajarVolumenVideo()">Bajar volumen</button>
+	<button onclick="cambiarVelocidadVideo(1)">Velocidad Normal (1x)</button>
+        <button onclick="cambiarVelocidadVideo(1.5)">Acelerar Video (1.5x)</button>
+        <button onclick="cambiarVelocidadVideo(2)">Acelerar Video (2x)</button>	
+	<br><br>
+	<hr>
+
+
+
+<u><h1 id="AudioMTL">Audio</h1></u>
+	<h2>Elija una Musica</h2>	
+<br>
+	
+<select id="selectorAudio">
+        <option value="Multisonido.mp3">ASGORE THEME</option>
+	<option value="Multisonido2.mp3">Hope and Dreams</option>
+	<option value="Multisonido3.mp3">World Revolving</option>
+	<option value="Multisonido4.mp3">The Finale</option>
+	<option value="Multisonido5.mp3">Spider Dance</option>
+	<option value="Multisonido6.mp3">JumpStyle I love you so</option>
+	<option value="Multisonido7.mp3">Beneath the Mask</option>
+	<option value="Multisonido8.mp3">My little baby boy JumpStyle</option>
+</select>
+    <br><br>
+    <audio id="reproductorAudio" controls>
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <br><br>
+    <h2>Controles de Audio</h2>
+  	<button onclick="reproducirAudio()">Reproducir audio</button>
+  	<button onclick="pausarAudio()">Pausar audio</button>
+ 	<button onclick="subirVolumenAudio()">Subir volumen</button>
+    	<button onclick="bajarVolumenAudio()">Bajar volumen</button>	
+	<button onclick="cambiarVelocidadAudio(1)">Velocidad Normal (1x)</button>
+        <button onclick="cambiarVelocidadAudio(1.5)">Acelerar Audio (1.5x)</button>
+        <button onclick="cambiarVelocidadAudio(2)">Acelerar Audio (2x)</button>
+</center>
+
+ <script>
+
+	// --- Video ---
+    	function reproducirVideo() {
+      	reproductorVideo.play();
+    	}
+
+   	function pausarVideo() {
+     	reproductorVideo.pause();
+    	}
+
+	function subirVolumenVideo() {
+            if (reproductorVideo.volume < 1) { 
+                reproductorVideo.volume += 0.2;
+            }
+        }
+
+        function bajarVolumenVideo() {
+            if (reproductorVideo.volume > 0) { 
+                reproductorVideo.volume -= 0.2;
+            }
+        }
+
+	function cambiarVelocidadVideo(speed) {
+            reproductorVideo.playbackRate = speed;
+            console.log(`Velocidad del video ajustada a: ${speed}x`);
+	}
+
+        const selector = document.getElementById('selectorVideo');
+        const reproductor = document.getElementById('reproductorVideo');
+
+        reproductor.src = selector.value;
+	reproductorVideo.volume = 0.8;	
+
+        selector.addEventListener('change', function() {
+            const videoSeleccionado = this.value;
+
+            reproductor.src = videoSeleccionado;
+
+            reproductor.load();
+
+            reproductor.play();
+	});
+
+	 // --- Audio ---
+        const selectorAudio = document.getElementById('selectorAudio');
+        const reproductorAudio = document.getElementById('reproductorAudio');
+
+       
+        function reproducirAudio() {
+            reproductorAudio.play();
+        }
+
+        function pausarAudio() {
+            reproductorAudio.pause();
+        }
+
+	function subirVolumenAudio() {
+            if (reproductorAudio.volume < 1) { 
+                reproductorAudio.volume += 0.1; 
+            }
+        }
+
+        function bajarVolumenAudio() {
+            if (reproductorAudio.volume > 0) {
+                reproductorAudio.volume -= 0.1; 
+            }
+        }
+       	
+	function cambiarVelocidadAudio(speed) {
+            reproductorAudio.playbackRate = speed;
+            console.log(`Velocidad del audio ajustada a: ${speed}x`);
+	}
+
+        reproductorAudio.src = selectorAudio.value;
+	reproductorAudio.volume = 0.8;
+
+        selectorAudio.addEventListener('change', function() {
+            const audioSeleccionado = this.value;
+            reproductorAudio.src = audioSeleccionado;
+            reproductorAudio.load();
+            reproductorAudio.play();
+        });
+
+</script>
+
+
+	</main>
+
+    	<section>	
+   	</section>
+
+    	<aside>
+	</aside>
+
+   	 <footer><p>&copy; 2025 HowLearnMTL. Diseñado por Ibrahin Mancilla en Panamá, Todos los derechos reservados.</p></footer>
+
+</body>
+</html>
